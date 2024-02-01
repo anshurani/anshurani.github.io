@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title | upcase }}</title>
+
+    {% for css in page.custom-css-list %}
+        <link href="{{ css }}" rel="stylesheet">
+    {% endfor %}
+
+    {% for javascript in page.custom-javascript-list %}
+      <script src="{{ javascript }}"></script>
+    {% endfor %}
+  </head>
+  <body>
+    <div class="container-fluid">
+      {% include header.html %}
+      <div class="container" data-spy="scroll" data-target="#navbar-header">
+        {% include introduction.html %}
+         <!--  <footer class="footer py-4 text-center">
+            <div class="pb-1 f-sm">
+              &copy; 2024 Anshu Rani
+            </div>
+            <div class="opacity-80 f-sm">
+              Developed by <a href="/" target="_blank" class="font-weight-bold">Anshu Rani</a> using
+              <span class="font-weight-bold">Ruby on Rails</span> ⚡️
+            </div>
+          </footer> -->
+      </div>
+      {{ content }}
+    </div>
+    <script type="text/javascript">
+      // show skills on introduction section
+      const typed = new Typed('#tech-skills', {
+        strings: [
+          'Ruby on Rails',
+          'MySQL',
+          'PostgreSQL', 
+          'HTML',
+          'CSS',
+          'Javascript',
+          'JQuery',
+          'Bootstrap',
+          'NextJs'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        startDelay: 100,
+        loop: true
+      });
+    </script>
+  </body>
+</html>
