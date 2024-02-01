@@ -1,0 +1,28 @@
+<% icon_data = filtered_icon_details(icon_details) %>
+
+<div class="<%= icon_data[:icon_class] %>">
+  <% if icon_data[:icon_url] %>
+    <%= link_to image_tag("#{icon_data[:icon_name]}-logo-light.#{icon_data[:icon_extension]}", 
+      size: icon_data[:icon_size], 
+      class: "#{icon_data[:is_static] ? '': 'theme-light-logo'} #{icon_data[:dark_st_logo] ? 'd-none': ''} img-fluid"), 
+      h(icon_data[:icon_url]), 
+      target: "_blank" 
+    %>
+    <%= link_to image_tag("#{icon_data[:icon_name]}-logo-dark.#{icon_data[:icon_extension]}", 
+      size: icon_data[:icon_size], 
+      class: "#{icon_data[:is_static] ? '': 'theme-dark-logo d-none'} #{icon_data[:light_st_logo] ? 'd-none': ''} img-fluid"), h(icon_data[:icon_url]), 
+      target: "_blank"  
+    %>
+  <% else %>
+    <%= image_tag "#{icon_data[:icon_name]}-logo-light.#{icon_data[:icon_extension]}", 
+      size: icon_data[:icon_size], 
+      class: "#{icon_data[:is_static] ? '': 'theme-light-logo'} #{icon_data[:dark_st_logo] ? 'd-none': ''} img-fluid" 
+    %>
+    <%= image_tag "#{icon_data[:icon_name]}-logo-dark.#{icon_data[:icon_extension]}", 
+      size: icon_data[:icon_size], 
+      class: "#{icon_data[:is_static] ? '': 'theme-dark-logo d-none'} #{icon_data[:light_st_logo] ? 'd-none': ''} img-fluid"%>
+    <% if icon_data[:show_title] %>
+      <p class="f-sm"><%= icon_details[:title] %></p>
+    <% end %>
+  <% end %>
+</div>

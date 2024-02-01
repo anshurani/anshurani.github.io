@@ -1,0 +1,44 @@
+<div id="contact-me" class="row py-4">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6 text-center d-flex flex-column">
+    <h2 class="font-weight-bold text-capitalize mb-4 f-xxl">Get in touch</h2>
+    <p class="text-left">
+      Hello there! I'm thrilled that you've taken the time to explore my portfolio. If you have any questions, opportunities, or just want to connect, I'd love to hear from you. Feel free to reach out using any of the methods below:
+    </p>
+    <div class="text-center my-4">
+      <div class="text-center">
+        <%= link_to 'mailto:anshurani261194@gmail.com', class: "btn btn-primary text-capitalize btn-lg mt-2 #{@mobile ? '' : 'w-50'} f-md" do %>
+          <div class="d-flex justify-content-center align-items-center">
+            <%= render 'show_icon', icon_details: { title: 'mailto', size: '20x20', css_class: 'pr-2 pt-0 float-left', static_logo: 'dark' } %> 
+          <span class="float-left f-md mt-1">Send me Email</span>
+          </div>
+        <% end %>
+      </div> 
+      <div class="text-center">
+        <%= link_to 'tel:+919457935682', class: "btn btn-primary text-capitalize btn-lg mt-2 #{@mobile ? '' : 'w-50'} f-md" do %>
+          <div class="d-flex justify-content-center align-items-center">
+            <%= render 'show_icon', icon_details: { title: 'callme', size: '20x20', extension: 'svg', css_class: 'pr-2 pt-0 float-left', static_logo: 'dark' } %> 
+          <span class="float-left f-md mt-1">Call me</span>
+          </div>
+        <% end %>
+      </div>
+      <div class="text-center">
+        <%= link_to 'skype:live:.cid.dca1c55b620ca003?chat', class: "btn btn-primary text-capitalize btn-lg mt-2 #{@mobile ? '' : 'w-50'} f-md" do %>
+          <div class="d-flex justify-content-center align-items-center">
+            <%= render 'show_icon', icon_details: { title: 'skype', size: '25x25', extension: 'svg', css_class: 'pr-2 pt-0 float-left', static_logo: 'dark' } %> 
+          <span class="float-left f-md mt-1">Skype me</span>
+          </div>
+        <% end %>
+      </div>   
+    </div>
+    <p class="text-left">I'm enthusiastic about discussing topics related to web development, design, or anything tech-related! Let's connect on LinkedIn to continue the conversation.</p>
+    <div class="text-center my-3">
+      <%= link_to 'https://www.linkedin.com/in/anshu-rani-50456273/', class: "btn btn-primary text-capitalize btn-lg mt-2 #{@mobile ? '' : 'w-50'} f-md" do %>
+        <div class="d-flex justify-content-center align-items-center">
+          <%= render 'show_icon', icon_details: { title: 'in', size: '20x20', css_class: 'pr-2 pt-0 float-left', static_logo: 'dark' } %> <span class="float-left f-md">Send Message</span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-3"></div>
+</div>

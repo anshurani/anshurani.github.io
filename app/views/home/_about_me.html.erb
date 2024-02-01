@@ -1,0 +1,16 @@
+<div id="about-me" class="row py-4">
+  <div class="col-sm-12 col-12">
+    <h2 class="pb-0 d-flex justify-content-center font-weight-bold f-xxl">About me</h2>
+  </div>
+  <div class="col-sm-12 col-12 d-sm-flex justify-content-sm-center pt-4 overflow-hidden">
+    <div class="col-sm-6 col-12 text-center text-sm-right overflow-hidden">
+      <%= image_tag('anshu-pic.png', class: 'animation-element-left mw-100 img-fluid') %>
+    </div>
+    <div class="col-sm-6 col-12 text-center text-sm-left align-self-top about_info animation-element-right overflow-hidden">
+      <p class="f-md pt-4 pt-sm-0">
+        I'm a professional full-stack developer based in India with more than 5 years of experience in web development. I am very passionate and dedicated to my work. I enjoy every stage of the development process, from requirements discussions to writing code and deployment on the server.
+      </p>
+      <%= link_to "Download Resume", download_resume_path, class: "btn btn-primary text-capitalize btn-lg mt-3" %>   
+    </div>
+  </div>
+</div>

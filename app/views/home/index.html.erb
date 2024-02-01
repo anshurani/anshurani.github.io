@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <nav id="navbar-header" class="header navbar <%= @mobile ? '' : 'px-5' %> ">
+    <h1 class="navbar-brand text-uppercase font-weight-bold f-xxl animate__animated animate__flip">AR</h1>
+    <label id="switch" class="switch">
+        <input type="checkbox" id="slider">
+        <span class="slider round"></span>
+    </label>
+    <ul class="nav nav-pills">
+      <% if @mobile %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item f-md" href="#home">Home</a>
+            <a class="dropdown-item f-md" href="#work-history">Work</a>
+            <a class="dropdown-item f-md" href="#about-me">About</a>
+            <a class="dropdown-item f-md" href="#skills">Skills</a>
+            <a class="dropdown-item f-md" href="#contact-me">Get in Touch</a>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <a class="nav-link f-md" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link f-md" href="#work-history">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link f-md" href="#about-me">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link f-md" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link f-md" href="#contact-me">Get in Touch</a>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+  <div class="container" data-spy="scroll" data-target="#navbar-header">
+    <%= render partial: 'introduction' %>
+    <%= render partial: 'work_history' %>
+    <%= render partial: 'about_me' %>
+    <%= render partial: 'skills' %>
+    <%= render partial: 'get_in_touch' %>
+    <footer class="footer py-4 text-center">
+      <div class="pb-1 f-sm">
+        &copy; 2024 Anshu Rani
+      </div>
+      <div class="opacity-80 f-sm">
+        Developed by <a href="/" target="_blank" class="font-weight-bold">Anshu Rani</a> using
+        <span class="font-weight-bold">Ruby on Rails</span> ⚡️
+      </div>
+    </footer>
+  </div>
+</div>
