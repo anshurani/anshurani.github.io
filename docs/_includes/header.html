@@ -1,5 +1,7 @@
-<nav id="navbar-header" class="header navbar">
-  <h1 class="navbar-brand text-uppercase font-weight-bold f-xxl animate__animated animate__flip">AR</h1>
+<nav id="navbar-header" class="header navbar px-0 px-sm-3">
+  <a href="/" class="navbar-brand">
+    {% include show_icon.html title='ar' dimension='140x140' css_class='img-fluid ar-logo' %}
+  </a>
   <label id="switch" class="switch">
       <img src="{{ site.data.assets['night'] | absolute_url }}" class="theme-dark-logo night-img img-fluid d-none" width="30" height="30" />
       <img src="{{ site.data.assets['sunny'] | absolute_url }}" class="theme-light-logo sunny-img img-fluid d-none" width="30" height="30" />

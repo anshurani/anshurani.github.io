@@ -32,6 +32,11 @@ body {
 }
 
 /* header section starts */
+.ar-logo {
+  width: 6rem;
+  aspect-ratio: 1890 / 1417;
+}
+
 .container-fluid {
   background: var(--color-secondary);
 }
@@ -138,7 +143,8 @@ body {
   font-size: 3rem;
 }
 
-.intro-detail p:nth-child(2) {
+h1 {
+  font-size: 3rem;
   opacity:0.8;
 }
 
