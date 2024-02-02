@@ -70,6 +70,7 @@ body {
   display: inline-block;
   width: 50px;
   height: 25px;
+  cursor: pointer;
 }
 
 /* Hide default HTML checkbox */
@@ -92,9 +93,11 @@ body {
   transition: 0.4s;
 }
 
-.slider:before {
+.night-img {
   position: absolute;
-  content: "";
+  z-index: 99;
+  background: white;
+  border-radius: 45%;
   height: 30px;
   width: 30px;
   left: 0px;
@@ -105,26 +108,17 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   box-shadow: 0 0px 15px #2020203d; 
-  background: white url('../img/night.png');
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(24px);
-  -ms-transform: translateX(24px);
-  transform: translateX(24px);
-  background: white url('../img/sunny.png');
-  background-repeat: no-repeat;
-  background-position: center;
+.sunny-img{
+  z-index: 99;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: -3px;
+  width: 30px;
+  height: 30px;
+  right: 0;
 }
 
 /* Rounded sliders */

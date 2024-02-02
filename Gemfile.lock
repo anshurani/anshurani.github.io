@@ -79,6 +79,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     autoprefixer-rails (10.4.16.0)
       execjs (~> 2)
+    awesome_print (1.9.2)
     base64 (0.2.0)
     bigdecimal (3.1.6)
     bindex (0.8.1)
@@ -102,6 +103,9 @@ GEM
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crass (1.0.6)
+    curl (0.0.9)
+      awesome_print (>= 0.2.1)
+      unidecoder (>= 1.1.1)
     date (3.3.4)
     debug (1.9.1)
       irb (~> 1.10)
@@ -242,6 +246,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    unidecoder (1.1.2)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -264,6 +269,7 @@ DEPENDENCIES
   bootstrap (~> 4.6.2)
   browser
   capybara
+  curl (~> 0.0.9)
   debug
   importmap-rails
   jbuilder

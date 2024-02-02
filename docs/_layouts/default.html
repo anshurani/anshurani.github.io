@@ -17,15 +17,19 @@
       {% include header.html %}
       <div class="container" data-spy="scroll" data-target="#navbar-header">
         {% include introduction.html %}
-         <!--  <footer class="footer py-4 text-center">
-            <div class="pb-1 f-sm">
-              &copy; 2024 Anshu Rani
-            </div>
-            <div class="opacity-80 f-sm">
-              Developed by <a href="/" target="_blank" class="font-weight-bold">Anshu Rani</a> using
-              <span class="font-weight-bold">Ruby on Rails</span> ⚡️
-            </div>
-          </footer> -->
+        {% include work_history.html %}
+        {% include about_me.html %}
+        {% include skills.html %}
+        {% include get_in_touch.html %}
+        <footer class="footer py-4 text-center">
+          <div class="pb-1 f-sm">
+            &copy; 2024 Anshu Rani
+          </div>
+          <div class="opacity-80 f-sm">
+            Developed by <a href="/" target="_blank" class="font-weight-bold">Anshu Rani</a> using
+            <span class="font-weight-bold">Ruby on Rails</span> ⚡️
+          </div>
+        </footer>
       </div>
       {{ content }}
     </div>

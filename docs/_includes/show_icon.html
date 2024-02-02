@@ -1,0 +1,61 @@
+{% assign file_name =  include.title | replace: " ", "" | downcase %}
+{% assign file_size =  include.dimension | default: '35x35' | split: 'x' %}
+
+{% capture is_static %}
+  {% if include.static_logo and include.static_logo == "dark" or include.static_logo == "light" %}
+    static 
+  {% endif %}
+{% endcapture %}
+
+{% capture light_theme_class %}
+  {% if include.static_logo and include.static_logo == "dark" %}
+    {{ is_static }} d-none
+  {% elsif include.static_logo %}
+    {{ is_static }}
+  {% endif %}
+{% endcapture %}
+
+{% capture dark_theme_class %}
+  {% if include.static_logo and include.static_logo == "light" %}
+    {{ is_static }} d-none
+  {% elsif include.static_logo %}
+    {{ is_static }}
+  {% endif %}
+{% endcapture %}
+
+
+{% capture light_logo %}{{ file_name | append: '-logo-light' }}{% endcapture %}
+{% capture dark_logo %}{{ file_name | append: '-logo-dark' }}{% endcapture %}
+
+<div class="{{ include.css_class | default: 'pr-3 pt-2' }}">
+  {% if include.url %}
+    <a href="{{ include.url }}" target="_blank">
+      <img src="{{ site.data.assets[light_logo] | absolute_url}}"
+        width="{{ file_size.first }}"
+        height="{{ file_size.last }}"
+        class=" theme-light-logo {{ light_theme_class }} img-fluid"
+      />
+    </a>
+    <a href="{{ include.url }}" target="_blank">
+      <img src="{{ site.data.assets[dark_logo] | absolute_url }}"
+        width="{{ file_size.first }}"
+        height="{{ file_size.last }}"
+        class="theme-dark-logo {{ dark_theme_class }} img-fluid"
+      />
+    </a>
+  {% else %}
+    <img src="{{ site.data.assets[light_logo] | absolute_url }}"
+      width="{{ file_size.first }}"
+      height="{{ file_size.last }}"
+      class=" theme-light-logo {{ light_theme_class }} img-fluid"
+    />
+    <img src="{{ site.data.assets[dark_logo] | absolute_url }}"
+      width="{{ file_size.first }}"
+      height="{{ file_size.last }}"
+      class="theme-dark-logo {{ dark_theme_class }} img-fluid"
+    />
+    {% if include.show_title %}
+      <p class="f-sm">{{ include.title }}</p>
+    {% endif %}
+  {% endif %}
+</div>

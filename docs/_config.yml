@@ -36,9 +36,9 @@ sass:
     sass_dir: _sass
 defaults:
   - scope:
-      path: "assets/img"
+      path: "assets/pdf"
     values:
-      image: true
+      pdf: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

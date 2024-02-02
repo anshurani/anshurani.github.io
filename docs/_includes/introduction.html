@@ -1,26 +1,33 @@
+{% assign resume_file = site.static_files | where_exp: "file", "file.path contains 'resume'" | first %}
 <div id="home" class="row">
   <div class="col-sm-12 col-12 pt-5 d-sm-flex justify-content-sm-center px-0 overflow-hidden">
     <div class="col-sm-6 d-none d-sm-block overflow-hidden">
-      <img src="{{ '/assets/img/top-image.png' | relative_url }}" class="img-fluid intro-img animate__animated animate__fadeInLeft" />
+      <img src="{{ site.data.assets['top-image'] | absolute_url }}" class="img-fluid intro-img animate__animated animate__fadeInLeft" />
     </div>
     <div class="col-sm-6 col-12 pl-1 overflow-hidden">
-      <div class="intro-detail text-center text-sm-left font-weight-bold animate__animated <%= @mobile ? 'animate__fadeInUp' : 'animate__fadeInRight' %>"> 
+      <div class="intro-detail text-center text-sm-left font-weight-bold animate__animated animate__fadeInRight"> 
         <p class="ml-1 mb-0 text-uppercase f-md"> Hello, I'm</p>
         <p class="text-uppercase mb-1">anshu rani</p>
         <p class="ml-1 mb-1 text-capitalize f-xxl"> full stack web developer</p>
         <p class="ml-1 f-lg font-weight-normal">Skilled in <span id="tech-skills" class="font-weight-bold retype-text"></span></p>
         <div class="mb-0 d-flex flex-row flex-wrap justify-content-center justify-content-sm-start">
-          <!-- <%= render 'show_icon', icon_details: { title: 'GitHub', size: '40x40', url: 'https://github.com/anshurani', css_class: 'pr-3 logo-images' } %> -->
-          <!-- <%= render 'show_icon', icon_details: { title: 'in', size: '40x40', url: 'https://www.linkedin.com/in/anshu-rani-50456273/', css_class: 'pr-3 logo-images'  } %> -->
+          {% include show_icon.html title='GitHub' dimension='40x40' url='https://github.com/anshurani' css_class='pr-3 logo-images' %}
+          {% include show_icon.html title='in' dimension='40x40' url='https://www.linkedin.com/in/anshu-rani-50456273/' css_class='pr-3 logo-images' %}
         </div>
-        <!-- <%= link_to "Download Resume", download_resume_path, class: "btn btn-primary text-capitalize btn-lg mt-2" %> -->
-        <!-- <%= link_to "Contact me", 'mailto:anshurani261194@gmail.com', class: "btn btn-primary text-capitalize btn-lg mt-2" %>         -->
+        <a href="{{ resume_file.path | relative_url }}" class="btn btn-primary text-capitalize btn-lg mt-2" download>
+          Download Resume
+        </a>
+        <a href="mailto:anshurani261194@gmail.com" class="btn btn-primary text-capitalize btn-lg mt-2">
+          Contact me
+        </a>
       </div>
     </div>
   </div>
   <div class="col-sm-12 col-12 d-flex justify-content-center p-5">
     <div class="scroll">
-      <!-- <%= link_to render('show_icon', icon_details: { title: 'down', size: '50x50', extension: 'svg' }), "#work-history" %> -->
+      <a href="#work-history">
+        {% include show_icon.html title='down' dimension='50x50' css_class='pr-3 logo-images' %}
+      </a>
     </div>
   </div>
 </div>

@@ -3,12 +3,18 @@ const toggleLogoImages = function(prevTheme, currTheme) {
   var $currElements = $(`.${currTheme}-logo`);
   $.each($currElements, function() {
     var $element = $(this);
+    if ($element.hasClass('static')) { 
+      return; 
+    }
     $element.removeClass('d-none');
   })
 
   var $prevElements = $(`.${prevTheme}-logo`);
   $.each($prevElements, function() {
     var $element = $(this);
+    if ($element.hasClass('static')) { 
+      return; 
+    }
     $element.addClass('d-none');
   })
 }
@@ -23,9 +29,11 @@ const setTheme = function(themeName) {
 const toggleTheme = function() {
   if (localStorage.getItem('theme') === 'theme-dark') {
     setTheme('theme-light');
+    $(".slider").css("background-color", "#2196f3");
     toggleLogoImages('theme-dark', 'theme-light');
   } else {
     setTheme('theme-dark');
+    $(".slider").css("background-color", "#ccc");
     toggleLogoImages('theme-light', 'theme-dark');
   }
 }
@@ -35,10 +43,12 @@ const setThemeOnLoad = function() {
   if (localStorage.getItem('theme') === 'theme-light') {
     setTheme('theme-light');
     $("#slider").prop("checked", true);
+    $(".slider").css("background-color", "#2196f3");
     toggleLogoImages('theme-dark', 'theme-light');
   } else {
     setTheme('theme-dark');
     $("#slider").prop("checked", false);
+    $(".slider").css("background-color", "#ccc");
     toggleLogoImages('theme-light', 'theme-dark');
   }
 }
@@ -69,7 +79,9 @@ const animationOnInViewElement = function() {
 }
 
 // call function to set default theme on page load
-setThemeOnLoad();
+$( document ).ready(function() {
+  setThemeOnLoad();
+});
 
 // call function to add animation when window is scrolled
 $(document).scroll(function() {
