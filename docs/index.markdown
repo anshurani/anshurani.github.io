@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: anshu rani | personal website
+title: "Bringing Ideas to Life: Anshu Rani's Web Development Journey"
 custom-css-list:
   - "https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
   - "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
