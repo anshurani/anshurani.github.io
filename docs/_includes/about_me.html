@@ -1,17 +1,17 @@
 {% assign resume_file = site.static_files | where_exp: "file", "file.path contains 'resume'" | first %}
 <div id="about-me" class="row py-4">
   <div class="col-sm-12 col-12">
-    <h2 class="pb-0 d-flex justify-content-center font-weight-bold f-xxl">About me</h2>
+    <h2 class="pb-0 d-flex justify-content-center font-weight-bold f-xxl text-color">About me</h2>
   </div>
   <div class="col-sm-12 col-12 d-sm-flex justify-content-sm-center pt-4 overflow-hidden">
     <div class="col-sm-6 col-12 text-center text-sm-right overflow-hidden">
       <img src="{{ site.data.assets['anshu-pic'] | absolute_url }}" class="animation-element-left mw-100 img-fluid" />
     </div>
     <div class="col-sm-6 col-12 text-center text-sm-left align-self-top about_info animation-element-right overflow-hidden">
-      <p class="f-md pt-4 pt-sm-0">
+      <p class="f-md pt-4 pt-sm-0 text-color">
         I'm a professional full-stack developer based in India with more than 5 years of experience in web development. I am very passionate and dedicated to my work. I enjoy every stage of the development process, from requirements discussions to writing code and deployment on the server.
       </p>
-      <a href="{{ resume_file.path | relative_url }}" class="btn btn-primary text-capitalize btn-lg mt-3" download>
+      <a href="{{ resume_file.path | relative_url }}" class="btn btn-primary intro-btn text-capitalize btn-lg mt-3" download>
         Download Resume
       </a> 
     </div>

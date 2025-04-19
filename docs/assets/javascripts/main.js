@@ -43,7 +43,7 @@ const setThemeOnLoad = function() {
   if (localStorage.getItem('theme') === 'theme-light') {
     setTheme('theme-light');
     $("#slider").prop("checked", true);
-    $(".slider").css("background-color", "#2196f3");
+    $(".slider").css("background-color", "rgba(var(--color-accent),1)");
     toggleLogoImages('theme-dark', 'theme-light');
   } else {
     setTheme('theme-dark');
