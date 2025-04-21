@@ -62,5 +62,7 @@
   "sunny":"https://res.cloudinary.com/dzv0ya6is/image/upload/v1706791814/images/sunny.png",
   "vuejs-logo-dark":"https://res.cloudinary.com/dzv0ya6is/image/upload/v1706791814/images/vuejs-logo-dark.png",
   "ubuntu-logo-light":"https://res.cloudinary.com/dzv0ya6is/image/upload/v1706791814/images/ubuntu-logo-light.png",
-  "vuejs-logo-light":"https://res.cloudinary.com/dzv0ya6is/image/upload/v1706791813/images/vuejs-logo-light.png"
+  "vuejs-logo-light":"https://res.cloudinary.com/dzv0ya6is/image/upload/v1706791813/images/vuejs-logo-light.png",
+  "nodejs-logo-light":"https://res.cloudinary.com/dzv0ya6is/image/upload/v1745251097/images/nodejs-logo-light.png",
+  "nodejs-logo-dark":"https://res.cloudinary.com/dzv0ya6is/image/upload/v1745251165/images/nodejs-logo-dark.png"
 }
